@@ -29,7 +29,23 @@ public class UserCrudCommandLineRunner implements CommandLineRunner {
         userRepository.save(user2);
 
         //too get all the user
+        System.out.println("before deletion");
         List<User> users=userRepository.findAll();
         System.out.println(users);
+
+
+        userRepository.delete(user1);
+        users= userRepository.findAll();
+        System.out.println("after deletion");
+        System.out.println(users);
+
+
+        //no update method...use save only
+        user2.setFirstName("lavi");
+        userRepository.save(user2);
+        users=userRepository.findAll();
+        System.out.println("after update user2");
+        System.out.println(users);
+
     }
 }

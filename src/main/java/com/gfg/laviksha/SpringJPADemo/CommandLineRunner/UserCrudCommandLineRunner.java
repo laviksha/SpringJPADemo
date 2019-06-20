@@ -1,5 +1,8 @@
 package com.gfg.laviksha.SpringJPADemo.CommandLineRunner;
 
+import com.gfg.laviksha.SpringJPADemo.Repository.UserRepository;
+import com.gfg.laviksha.SpringJPADemo.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -11,8 +14,15 @@ import javax.management.loading.ClassLoaderRepository;
 
 @Component
 public class UserCrudCommandLineRunner implements CommandLineRunner {
+    @Autowired
+    UserRepository userRepository;
+
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("running crud");
+        //System.out.println("running crud");
+
+    User user1=new User("Laviksha","soni");
+
+    userRepository.save(user1);
     }
 }

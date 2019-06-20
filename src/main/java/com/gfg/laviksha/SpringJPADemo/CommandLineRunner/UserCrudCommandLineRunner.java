@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.management.loading.ClassLoaderRepository;
+import java.util.List;
 
 //CLR-is a simple Spring Boot interface with a run method.
 //Spring Boot will automatically call the run method of all beans implementing this
@@ -22,7 +23,13 @@ public class UserCrudCommandLineRunner implements CommandLineRunner {
         //System.out.println("running crud");
 
     User user1=new User("Laviksha","soni");
-
     userRepository.save(user1);
+
+        User user2=new User("Uncle","soni");
+        userRepository.save(user2);
+
+        //too get all the user
+        List<User> users=userRepository.findAll();
+        System.out.println(users);
     }
 }

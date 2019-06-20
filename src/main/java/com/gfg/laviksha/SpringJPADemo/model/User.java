@@ -1,6 +1,15 @@
 package com.gfg.laviksha.SpringJPADemo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+
+    @Id //to make id as primary key or unique
+    @GeneratedValue(strategy = GenerationType.AUTO) //to autogenerate id
     private Long id;
     private String firstName;
     private String lastName;

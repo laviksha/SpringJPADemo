@@ -10,3 +10,7 @@ after creating repository where to see h2 database:
  3) search spring jpa show sql statements
     -add in application.properties  spring.jpa.show-sql=true and resun application
      - see in output various sql statement executed in backgroud
+
+ 4) for more queries-
+    search- spring data jpa documentation - see uery creation
+    - changes in UserRepository interface- springdataJpa provide implementation for it automatically

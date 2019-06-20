@@ -27,7 +27,7 @@ public class UserCrudCommandLineRunner implements CommandLineRunner {
 
         User user2=new User("Uncle","soni");
         userRepository.save(user2);
-
+/*
         //too get all the user
         System.out.println("before deletion");
         List<User> users=userRepository.findAll();
@@ -46,6 +46,17 @@ public class UserCrudCommandLineRunner implements CommandLineRunner {
         users=userRepository.findAll();
         System.out.println("after update user2");
         System.out.println(users);
+*/
 
+
+        User user3=new User("Shivam","soni");
+        userRepository.save(user3);
+
+        List<User> users=userRepository.findByFirstName("Shivam");
+        System.out.println("user with first name as shivam"+users);
+
+
+        List<User> users1=userRepository.findByFirstNameAndLastName("Laviksha","soni");
+        System.out.println("user"+users1);
     }
 }

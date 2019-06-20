@@ -1,0 +1,8 @@
+after creating repository where to see h2 database:
+1) open h2 console in spring boot
+    open 1st link
+    copy :spring.h2.console.enabled=true in application.properties
+
+ 2) search location of h2 console boot:
+     http://localhost:8080/h2-console - change port number if needed    -> then in database name type: jdbc:h2:mem:testdb
+     click on conect

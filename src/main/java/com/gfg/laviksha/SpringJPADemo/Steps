@@ -6,3 +6,7 @@ after creating repository where to see h2 database:
  2) search location of h2 console boot:
      http://localhost:8080/h2-console - change port number if needed    -> then in database name type: jdbc:h2:mem:testdb
      click on conect
+
+ 3) search spring jpa show sql statements
+    -add in application.properties  spring.jpa.show-sql=true and resun application
+     - see in output various sql statement executed in backgroud
